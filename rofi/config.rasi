@@ -1,0 +1,77 @@
+/* ~/.config/rofi/config.rasi */
+
+configuration {
+  modes:               "drun";
+  show-icons:          true;
+  icon-theme:          "Papirus";
+  font:                "JetBrainsMono Nerd Font 10";
+  drun-display-format: "{name}";
+  display-drun:        " Apps";
+  display-run:         " Run";
+  display-window:      " Windows";
+}
+
+* {
+  bg:       #1C1C23;
+  fg:       #FFFFFF;
+  hl:       #84A4C4;
+  sel:      #9FA4C4;
+  disabled: #555555;
+}
+
+window {
+  width:            700px;
+  background-color: @bg;
+  border:           2px solid;
+  border-color:     @hl;
+  border-radius:    20px;
+  location:         center;
+}
+
+mainbox {
+  background-color: transparent;
+  children:         [ inputbar, listview ];
+  spacing:          10px;
+  padding:          15px;
+}
+
+inputbar {
+  background-color: transparent;
+  children:         [ prompt, entry ];
+  spacing:          5px;
+}
+
+prompt {
+  background-color: transparent;
+  text-color:       @hl;
+}
+
+entry {
+  background-color: transparent;
+  text-color:       @fg;
+  placeholder:      "Search...";
+  placeholder-color: @disabled;
+}
+
+listview {
+  background-color: transparent;
+  columns:          1;
+  lines:            8;
+  spacing:          5px;
+}
+
+element {
+  background-color: transparent;
+  text-color:       @fg;
+  padding:          5px 10px;
+  border-radius:    10px;
+}
+
+element selected {
+  background-color: @hl;
+  text-color:       @bg;
+}
+
+element-icon {
+  size: 32px;
+}
