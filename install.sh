@@ -13,7 +13,7 @@ sudo apt install -y \
   i3 i3lock feh polybar rofi picom kitty \
   playerctl light papirus-icon-theme \
   pipx python3-pip imagemagick \
-  dex xss-lock nm-applet
+  dex xss-lock network-manager-gnome
 
 echo "==> Installing pywal..."
 pipx install pywal
