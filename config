@@ -65,7 +65,7 @@ tiling_drag modifier titlebar
 # ── App launchers ─────────────────────────────────────────────────────────────
 bindsym $mod+Return exec kitty
 bindsym $mod+Shift+q kill
-bindsym $mod+d exec --no-startup-id rofi -modi drun,run,window -show drun
+bindsym $mod+d exec --no-startup-id rofi -modes drun,run,window -show drun
 
 # ── Session ───────────────────────────────────────────────────────────────────
 bindsym $mod+c exec i3lock
