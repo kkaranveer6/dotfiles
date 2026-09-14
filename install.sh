@@ -10,7 +10,7 @@ REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 echo "==> Installing apt packages..."
 sudo apt update
 sudo apt install -y \
-  i3 i3lock feh polybar rofi picom kitty \
+  i3 i3lock feh polybar rofi picom kitty tmux \
   playerctl light papirus-icon-theme \
   pipx python3-pip imagemagick \
   dex xss-lock network-manager-gnome
@@ -59,6 +59,8 @@ cp picom.conf ~/.config/picom/picom.conf
 
 mkdir -p ~/.config/kitty
 cp kitty.conf ~/.config/kitty/kitty.conf
+
+cp tmux.conf ~/.tmux.conf
 
 echo ""
 echo "==> Wallpaper setup"
