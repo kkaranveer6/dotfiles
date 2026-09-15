@@ -41,26 +41,26 @@ echo "==> Fonts installed."
 
 cd "$REPO_DIR"
 
-echo "==> Copying configs..."
+echo "==> Symlinking configs..."
 mkdir -p ~/.config/i3
-cp config        ~/.config/i3/config
-cp status        ~/.config/i3/status 2>/dev/null || true
+ln -sf "$REPO_DIR/config" ~/.config/i3/config
+[ -f "$REPO_DIR/status" ] && ln -sf "$REPO_DIR/status" ~/.config/i3/status
 
 mkdir -p ~/.config/polybar
-cp polybar/config.ini  ~/.config/polybar/config.ini
-cp polybar/launch.sh   ~/.config/polybar/launch.sh
+ln -sf "$REPO_DIR/polybar/config.ini" ~/.config/polybar/config.ini
+ln -sf "$REPO_DIR/polybar/launch.sh"  ~/.config/polybar/launch.sh
 chmod +x ~/.config/polybar/launch.sh
 
 mkdir -p ~/.config/rofi
-cp rofi/config.rasi ~/.config/rofi/config.rasi
+ln -sf "$REPO_DIR/rofi/config.rasi" ~/.config/rofi/config.rasi
 
 mkdir -p ~/.config/picom
-cp picom.conf ~/.config/picom/picom.conf
+ln -sf "$REPO_DIR/picom.conf" ~/.config/picom/picom.conf
 
 mkdir -p ~/.config/kitty
-cp kitty.conf ~/.config/kitty/kitty.conf
+ln -sf "$REPO_DIR/kitty.conf" ~/.config/kitty/kitty.conf
 
-cp tmux.conf ~/.tmux.conf
+ln -sf "$REPO_DIR/tmux.conf" ~/.tmux.conf
 
 echo ""
 echo "==> Wallpaper setup"
