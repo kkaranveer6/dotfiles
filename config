@@ -31,6 +31,8 @@ client.placeholder      $bg     $bg     $fg   $bg       $bg
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
+# Natural (Mac-style) scrolling on the touchpad
+exec --no-startup-id xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Natural Scrolling Enabled" 1
 
 # ── Autostart: run on every reload/restart ────────────────────────────────────
 # Restore last pywal color scheme and merge into Xresources
